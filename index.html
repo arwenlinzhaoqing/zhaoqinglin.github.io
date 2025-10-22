@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Personal Website</title>
+  <meta name="description" content="Portfolio, projects, and CV." />
+  <meta property="og:title" content="Your Name — Personal Website" />
+  <meta property="og:description" content="Portfolio, projects, and CV." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --panel: #121621;
+      --text: #e8ecf1;
+      --muted: #a3adbd;
+      --brand: #6aa2ff;
+      --brand-2: #8ef0c3;
+      --border: #1f2736;
+      --shadow: 0 8px 24px rgba(0,0,0,0.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: linear-gradient(180deg, #0b0d12 0%, #0e1420 60%, #0b0d12 100%);
+      line-height: 1.6;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+    header.site {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(8px);
+      background: rgba(11,13,18,0.6);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+    .brand { font-weight: 700; letter-spacing: .4px; }
+    .nav a { margin-left: 16px; font-size: 14px; color: var(--muted); }
+    .nav a:hover { color: var(--text); }
+
+    .hero { padding: 72px 0 32px; }
+    .hero-card {
+      background: linear-gradient(180deg, var(--panel), #0f1320);
+      border: 1px solid var(--border);
+      border-radius: 18px; padding: 28px; box-shadow: var(--shadow);
+    }
+    .hero h1 { margin: 0 0 6px; font-size: 36px; letter-spacing: .3px; }
+    .hero p { margin: 0; color: var(--muted); }
+    .badges { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .badge { font-size: 12px; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border); background: rgba(255,255,255,0.02); color: var(--muted); }
+
+    section { padding: 38px 0; }
+    h2 { margin: 0 0 16px; font-size: 22px; letter-spacing: .2px; }
+
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+    .card {
+      grid-column: span 12;
+      background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 18px; box-shadow: var(--shadow);
+    }
+    .card h3 { margin: 0 0 8px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); }
+
+    @media (min-width: 720px) {
+      .hero h1 { font-size: 44px; }
+      .card.thirds { grid-column: span 4; }
+      .card.halves { grid-column: span 6; }
+    }
+
+    .list { list-style: none; padding-left: 0; margin: 0; }
+    .list li { padding: 10px 12px; border: 1px solid var(--border); border-radius: 12px; background: rgba(255,255,255,0.02); margin-bottom: 10px; }
+    .list small { color: var(--muted); }
+
+    .pill-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+    .pill-links a { border: 1px solid var(--border); border-radius: 999px; padding: 8px 12px; background: rgba(255,255,255,0.02); font-size: 14px; color: var(--text); }
+
+    footer { padding: 40px 0 60px; color: var(--muted); text-align: center; }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <div class="brand">Your Name</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="top">
+      <div class="hero-card">
+        <h1>Hi, I’m Your Name.</h1>
+        <p>Short role/field line — e.g., “Physicist & instrument builder working on precision sensing and gravitational-wave instrumentation.”</p>
+        <div class="badges">
+          <span class="badge">Based in City, Country</span>
+          <span class="badge">Open to collaborations</span>
+          <span class="badge">Email: you@example.com</span>
+        </div>
+        <div class="pill-links">
+          <a href="#projects">See projects</a>
+          <a href="#cv">Download CV</a>
+          <a href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="card">
+        <p>
+          Write 5–8 lines: what you work on, what you care about, and where you’re headed. Mention current focus, collaborators, and tools.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card thirds">
+          <h3>Project One</h3>
+          <p>One-liner about the goal and your role. <a href="#">Paper/code/demo →</a></p>
+        </article>
+        <article class="card thirds">
+          <h3>Project Two</h3>
+          <p>Key result or artifact. <a href="#">Read more →</a></p>
+        </article>
+        <article class="card thirds">
+          <h3>Project Three</h3>
+          <p>Why it mattered; what changed. <a href="#">Details →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications & Talks</h2>
+      <ul class="list">
+        <li>
+          <strong>Title of work</strong> — Authors. <em>Venue</em>, Year. <small><a href="#">PDF</a> • <a href="#">BibTeX</a></small>
+        </li>
+        <li>
+          <strong>Talk Name</strong> — Event, Year. <small><a href="#">Slides</a> • <a href="#">Video</a></small>
+        </li>
+      </ul>
+    </section>
+
+    <section id="cv">
+      <h2>CV</h2>
+      <div class="card halves">
+        <p>Keep an online snapshot and a downloadable PDF.</p>
+        <div class="pill-links">
+          <a href="cv.pdf">Download CV (PDF)</a>
+          <a href="#">Short bio</a>
+          <a href="#">Google Scholar / ORCID</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a> · GitHub: <a href="https://github.com/your-username">@your-username</a> · LinkedIn: <a href="#">Profile</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="y"></span> Your Name. Built with GitHub Pages.</div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
